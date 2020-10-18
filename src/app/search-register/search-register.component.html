@@ -1,0 +1,11 @@
+
+<div style="margin-top: 20px;" *ngIf="SearchRegister.registers.length">
+
+    <h2 [hidden]="!SearchRegister.registers">   Heroes searched    </h2>
+
+    <div *ngFor="let register of SearchRegister.registers">
+        {{ register }}
+    </div>
+    <button (click)="SearchRegister.deleteRegister()">  Clear   </button>
+
+</div>
