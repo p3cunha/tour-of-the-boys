@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'charlieds';
+  src: url(./../assets/font/Charliedontsurf.ttf);
+}
+@font-face {
+  font-family: 'vought';
+  src: url(./../assets/font/CGFLocustResistance.ttf);
+}
+h1 {
+  font-family: 'charlieds';
+
+}
 nav a {
   padding: 5px 10px;
   text-decoration: none;

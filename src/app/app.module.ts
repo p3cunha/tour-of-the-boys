@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { MatSliderModule } from '@angular/material/slider';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +27,8 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    RouterModule
+    RouterModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
