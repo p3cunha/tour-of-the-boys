@@ -9,9 +9,9 @@ export class SearchRegisterService {
   
   constructor() { }
 
-  addRegister(register){          // receive pushed hero from the-heroesService 
-    this.registers.push(register) // push hero info to array registers
-  }                               // displayed on hero searched
+  addRegister(register){          // receive pushed hero from the-heroes-service 
+    this.registers.push(register) // store register received to array registers
+  }                               // display on hero searched footer
 
   deleteRegister(){
     this.registers = []

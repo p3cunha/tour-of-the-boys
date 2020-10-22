@@ -1,11 +1,10 @@
-
-<div style="margin-top: 20px;" *ngIf="SearchRegister.registers.length">
-
-    <h2 [hidden]="!SearchRegister.registers">   Heroes searched    </h2>
-
-    <div *ngFor="let register of SearchRegister.registers">
-        {{ register }}
+<div class="footer">
+    <div class="row">
+        <h2 [hidden]="!SearchRegister.registers">   Heroes searched    </h2>
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4" *ngFor="let register of SearchRegister.registers">
+            {{ register }}
+        </div>
+        <button (click)="SearchRegister.deleteRegister()">  Clear   </button>
     </div>
-    <button (click)="SearchRegister.deleteRegister()">  Clear   </button>
-
 </div>
+

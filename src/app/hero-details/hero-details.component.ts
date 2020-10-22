@@ -29,5 +29,14 @@ export class HeroDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id') //catch id on URL
     this.TheHeroesService.catchHeroById(id) // push to id to registers and return the hero matching with id
     .subscribe(hero => this.hero = hero) // hero returned becomes this.hero, displayed on card
-  }                                       
+  }              
+  
+  goBack(){
+    this.location.back()
+  }
+
+  save(){
+    this.TheHeroesService.updateHero(this.hero)
+    .subscribe(() => this.goBack());
+  }
 }

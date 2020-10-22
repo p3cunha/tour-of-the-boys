@@ -119,6 +119,10 @@
               "devServerTarget": "tour-of-the-boys:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

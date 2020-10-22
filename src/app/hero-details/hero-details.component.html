@@ -9,9 +9,12 @@
     <div>
         <label>
             <input [(ngModel)]="hero.name" placeholder="Modify the name"/>
-            <a class="btn" routerLink="/dashboard" >Back to Dashboard</a>
-            <a class="btn" routerLink="/heroes" >Back to List</a>
+            <button (click)="goBack()">Go Back!</button>
+            <!-- <a class="btn" routerLink="/dashboard" >Back to Dashboard</a>
+            <a class="btn" routerLink="/heroes" >Back to List</a> -->
         </label>
     </div>
+
+    <button (click)="save()">Save</button>
     
 </div>

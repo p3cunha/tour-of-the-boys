@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tour-of-the-boys": {
+      "hosting": {
+        "tour-of-the-boys": [
+          "tour-of-the-boys"
+        ]
+      }
+    }
+  }
+}
