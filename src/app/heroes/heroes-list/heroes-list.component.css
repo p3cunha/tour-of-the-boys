@@ -70,3 +70,11 @@
   font-weight: bolder;
   transition: all 0.6s;
 }
+
+button.delete {
+  position: relative;
+  left: 194px;
+  top: -32px;
+  background-color: gray !important;
+  color: white;
+}

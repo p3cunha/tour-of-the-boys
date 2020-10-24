@@ -31,10 +31,10 @@ export class TheHeroesService {
   }
 
   deliveryHero(id: number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
-    return this.http.get<Hero>(url).pipe(
-      tap(_ => this.log(`fetched hero id=${id}`)),
-      catchError(this.handleError<Hero>(`deliveryHero id=${id}`))
+    const url = `${this.heroesUrl}/${id}`; // put id on URL
+    return this.http.get<Hero>(url).pipe( // pass URL as observable<Hero>
+      tap(_ => this.log(`fetched hero id=${id}`)), //send message to log in search-register
+      catchError(this.handleError<Hero>(`deliveryHero id=${id}`)) //send str msg to errorhandl
     );
   }
 
@@ -72,8 +72,16 @@ export class TheHeroesService {
 
   addHero(hero: Hero): Observable<Hero> {
     return this.http.post(this.heroesUrl, hero, this.httpOptions)
-    .pipe( tap( _ => this.log( `Hero added id: ${hero.id}` ) ),
+    .pipe( tap( (newHero: Hero) => this.log( `Hero added id: ${newHero.id}` ) ),
     catchError(this.handleError<any>('addHero')) )
+  }
+
+  deleteHero(hero: Hero): Observable<Hero> {
+    const id = typeof hero === 'number' ? hero : hero.id
+    const url = `${this.heroesUrl}/${id}}`
+    return this.http.delete<Hero>(url, this.httpOptions)
+    .pipe( tap( _ => this.log(`Hero deleted id: ${id}` ) ) ,
+    catchError(this.handleError<Hero>('deleteHero') ) )
   }
 }
 
