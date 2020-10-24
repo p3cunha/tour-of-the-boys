@@ -8,6 +8,12 @@
 }
 h1 {
   font-family: 'charlieds';
+  font-size: 30pt;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 0;
+  padding-top: 0;
+	
 
 }
 nav a {
@@ -28,6 +34,10 @@ nav a:hover {
 nav a.active {
   color: #039be5;
 }
+
+
+
+
 /* 
 main{
   text-align: center;

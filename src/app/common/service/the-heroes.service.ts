@@ -4,9 +4,9 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 
-import { Hero } from './hero';
+import { Hero } from '../interface/hero';
 import { SearchRegisterService } from './search-register.service';
-import { HEROES } from './heroes-lits'
+import { HEROES } from '../../heroes-lits'
 
 @Injectable({
   providedIn: 'root'
@@ -59,7 +59,7 @@ export class TheHeroesService {
   }
 
   updateHero(hero: Hero): Observable<any>{
-     return this.http.put(this.heroesUrl, hero, this.httpOptions)
+    return this.http.put(this.heroesUrl, hero, this.httpOptions)
      .pipe ( tap( _ => this.log( `updated hero id =${hero.id}` ) ),
      catchError(this.handleError<any>('updateHero') )
      )

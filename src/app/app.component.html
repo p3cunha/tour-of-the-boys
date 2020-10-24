@@ -1,13 +1,13 @@
+<app-header></app-header>
 <h1>{{ title }}</h1>
+
 <!-- <mat-slider min="1" max="100" step="1" value="1"></mat-slider> -->
-<nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink='/heroes'>Heroes</a>
-</nav>
+
 <!-- <router-outlet></router-outlet> -->
 <main [@routeAnimations]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
 </main>
+
 
 <app-search-register></app-search-register>
 

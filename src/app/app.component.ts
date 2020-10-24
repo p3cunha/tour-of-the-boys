@@ -17,6 +17,7 @@ import { slideInAnimation } from './animation';
   styleUrls: ['./app.component.css'],
   animations: [ slideInAnimation ]
 })
+
 export class AppComponent {
   title = 'Tour of The Boys';
 

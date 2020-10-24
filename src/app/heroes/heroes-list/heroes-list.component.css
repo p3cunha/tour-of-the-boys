@@ -1,7 +1,7 @@
 /* HeroesComponent's private CSS styles */
 @font-face {
   font-family: 'charlieds';
-  src: url(../../assets/font/Charliedontsurf.ttf);
+  src: url(../../../assets/font/Charliedontsurf.ttf);
 }
 .heroes {
     margin: 0 0 2em 0;

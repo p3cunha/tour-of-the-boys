@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Hero } from '../hero';
-import { SearchRegisterService } from '../search-register.service';
+import { Hero } from '../common/interface/hero';
+import { SearchRegisterService } from '../common/service/search-register.service';
 
 @Component({
   selector: 'app-search-register',

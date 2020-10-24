@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from '../hero';
-import { SearchRegisterService } from '../search-register.service';
-import { TheHeroesService } from '../the-heroes.service';
+import { Hero } from './../../common/interface/hero';
+import { SearchRegisterService } from './../../common/service/search-register.service';
+import { TheHeroesService } from './../../common/service/the-heroes.service';
 
 
 @Component({

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero } from '../hero';
-import { SearchRegisterService } from '../search-register.service';
-import { TheHeroesService } from '../the-heroes.service';
+import { Hero } from './../../common/interface/hero';
+import { SearchRegisterService } from './../../common/service/search-register.service';
+import { TheHeroesService } from './../../common/service/the-heroes.service';
 
 @Component({
   selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
+  templateUrl: './heroes-list.component.html',
+  styleUrls: ['./heroes-list.component.css']
 })
-export class HeroesComponent implements OnInit {
+export class HeroesListComponent implements OnInit {
 
   heroes: Hero[]
   // choosenHero: Hero
@@ -31,7 +31,7 @@ export class HeroesComponent implements OnInit {
   //   this.SearchRegister.addRegister(`${hero.name}`)
   // }
 
- add(name: string): void{ //catch hero added in template
+ add(name: string): void{   //catch hero added in template
   name = name.trim(); 
   if (!name) { return; } 
   this.TheHeroesService.addHero( { name } as Hero)
